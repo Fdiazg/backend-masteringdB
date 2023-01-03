@@ -9,11 +9,13 @@ const server_1 = __importDefault(require("./classes/server"));
 const defaul_routes_1 = __importDefault(require("./routes/defaul.routes"));
 const mastering_routes_1 = __importDefault(require("./routes/mastering.routes"));
 const server = new server_1.default();
+const cors = require('cors');
+server.app.use(cors());
 server.app.use(body_parser_1.default.json());
 server.app.use(body_parser_1.default.urlencoded({ extended: true }));
 server.app.use('/', defaul_routes_1.default);
 server.app.use('/mastering', mastering_routes_1.default);
-mongoose_1.default.connect('mongodb://localhost:27017/masteringDb', (error) => {
+mongoose_1.default.connect('mongodb+srv://user_mastering:masteringPass2023dB@cluster0.yyvysw0.mongodb.net/?retryWrites=true&w=majority', (error) => {
     if (error) {
         throw error;
     }
