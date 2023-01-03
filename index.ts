@@ -14,7 +14,7 @@ server.app.use(bodyParser.urlencoded({extended:true}));
 server.app.use('/', defaultRoutes);
 server.app.use('/mastering', masteringRoutes);
 
-mongoose.connect('mongodb://localhost:27017/masteringDb', (error)=>{
+mongoose.connect('mongodb+srv://user_mastering:masteringPass2023dB@cluster0.yyvysw0.mongodb.net/?retryWrites=true&w=majority', (error)=>{
     if(error){
         throw error;
     }
