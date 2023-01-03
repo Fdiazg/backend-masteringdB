@@ -5,7 +5,9 @@ import defaultRoutes from "./routes/defaul.routes";
 import masteringRoutes from "./routes/mastering.routes";
 
 const server = new Server();
+const cors = require('cors');
 
+server.app.use(cors());
 server.app.use(bodyParser.json());
 server.app.use(bodyParser.urlencoded({extended:true}));
 
