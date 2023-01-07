@@ -15,6 +15,9 @@ const masteringSchema = new Schema({
     },
     portada:{
         type: String
+    },
+    linkSpotify:{
+        type: String
     }
 
 });
@@ -25,6 +28,7 @@ interface IMastering extends Document{
     discoTipo: string;
     fechaLanzamiento: string;
     portada: string;
+    linkSpotify: string;
 }
 
 export const Mastering = model<IMastering>('Mastering', masteringSchema);

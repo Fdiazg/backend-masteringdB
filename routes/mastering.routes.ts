@@ -37,6 +37,7 @@ masteringRoutes.post("/", (req: Request, res: Response) => {
     discoTipo: body.discoTipo,
     fechaLanzamiento: body.fechaLanzamiento,
     portada: body.portada,
+    linkSpotify: body.linkSpotify
   };
 
   Mastering.create(mastering)
@@ -65,6 +66,7 @@ masteringRoutes.put("/:id", (req: Request, res: Response) => {
     discoTipo: body.discoTipo,
     fechaLanzamiento: body.fechaLanzamiento,
     portada: body.portada,
+    linkSpotify: body.linkSpotify
   };
 
   Mastering.findByIdAndUpdate(masteringId, mastering).then((masteringDb) => {

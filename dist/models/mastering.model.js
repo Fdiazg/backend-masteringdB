@@ -17,6 +17,9 @@ const masteringSchema = new mongoose_1.Schema({
     },
     portada: {
         type: String
+    },
+    linkSpotify: {
+        type: String
     }
 });
 exports.Mastering = (0, mongoose_1.model)('Mastering', masteringSchema);
